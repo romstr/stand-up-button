@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:weightSum="15">
+
+    <LinearLayout
+        android:id="@+id/llUserInitials"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="5"
+        android:weightSum="2">
+        <ImageView
+            android:id="@+id/ivUserAvatar"
+            android:src="@drawable/ic_face_glasses"
+            android:tint="@color/colorAccent"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            />
+        <TextView
+            android:id="@+id/tvUserInitials"
+            android:textSize="24dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:text="NS"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:weightSum="4">
+        <Switch
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:text=""
+            android:id="@+id/swUserActive" />
+        <TextView
+            android:id="@+id/tvUserName"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:text="Name Surname"/>
+    </LinearLayout>
+
+</LinearLayout>

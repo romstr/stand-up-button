@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llUserButtonMain"
+    android:layout_width="128dp"
+    android:layout_height="128dp"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_margin="5dp"
+    android:weightSum="2">
+    
+    <TextView
+        android:id="@+id/tvAttendantFirstName"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="ALEXANDER"/>
+
+    <LinearLayout
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/ivAttendantAvatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_face_asia" />
+
+        <TextView
+            android:id="@+id/tvAttendantInitials"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:text="NSA"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAttendantName"
+        android:gravity="center"
+        android:textSize="10dp"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:text="Surname Name"/>
+
+
+</LinearLayout>

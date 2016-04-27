@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">StandUp Button</string>
+
+    <string name="general_error">Error:\u0020</string>
+    <string name="no_back_warning">BACK button blocked\nTap on screen instead</string>
+    <string name="no_attendants">Finishing stand-up (Nothing to see here)</string>
+
+    <string name="title_users">Choose people for stand-up</string>
+    <string name="title_splash">Preparing stand-up</string>
+    <string name="title_queue">Click to speak</string>
+    <string name="title_results">Spent times</string>
+    <string name="title_timer">Quick speech</string>
+    <string name="title_login">Get your team from RedMine</string>
+
+    <string name="login_login">Login:</string>
+    <string name="login_password">Password:</string>
+    <string name="login_endpoint">Server URL:</string>
+    <string name="login_button">Go</string>
+
+    <string name="button_stand_up">Stand up</string>
+    <string name="button_random">Random</string>
+
+</resources>

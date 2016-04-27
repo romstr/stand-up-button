@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:id="@+id/llTimerActivityMain"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/colorGood"
+    android:layout_height="match_parent"
+    android:onClick="closeMe">
+
+    <LinearLayout
+        android:id="@+id/llTimerUserButton"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="64dp"
+        android:text="00:00:00"/>
+
+
+
+    <!--<Button-->
+        <!--android:onClick="postponeMe"-->
+        <!--android:visibility="visible"-->
+        <!--android:alpha="0.5"-->
+        <!--android:layout_width="128dp"-->
+        <!--android:layout_height="96dp"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:text="Postpone"/>-->
+
+</LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/llTimerActivityMain"
+        app:layout_anchorGravity="bottom|center"
+        android:layout_margin="10dp"
+        android:onClick="postponeMe"
+        android:src="@drawable/ic_postpone"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/llTimerActivityMain"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_margin="10dp"
+        android:onClick="startUserSelectActivity"
+        android:src="@drawable/ic_add"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/llTimerActivityMain"
+        app:layout_anchorGravity="bottom|left"
+        android:layout_margin="10dp"
+        android:onClick="removeMe"
+        android:src="@drawable/ic_absent"
+        />
+</android.support.design.widget.CoordinatorLayout>
