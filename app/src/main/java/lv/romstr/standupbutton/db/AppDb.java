@@ -79,6 +79,7 @@ public class AppDb {
                     User tmpUser = tmpList.get(0);
                     tmpUser.setFirstname(user.getFirstname());
                     tmpUser.setLastname(user.getLastname());
+                    tmpUser.setTtsName(user.getTtsName());
                     tmpUser.setFromRedmine(user.getFromRedmine());
                     tmpUser.save();
                 }

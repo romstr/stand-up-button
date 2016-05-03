@@ -51,7 +51,13 @@ public class UserToSpeech implements TextToSpeech.OnInitListener {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void speak(User user) {
-        tts.speak(user.getFirstname() + " " + user.getLastname() + " speaking", TextToSpeech.QUEUE_FLUSH, null, null);
+        String userName;
+        if (user.getTtsName() != null && !user.getTtsName().equals("")) {
+            userName = user.getTtsName();
+        } else {
+            userName = user.getFirstname() + " " + user.getLastname();
+        }
+        tts.speak(userName + " speaking", TextToSpeech.QUEUE_FLUSH, null, null);
     }
 
     public static void destroy() {

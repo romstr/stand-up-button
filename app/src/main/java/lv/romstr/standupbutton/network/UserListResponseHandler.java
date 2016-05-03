@@ -11,6 +11,7 @@ import org.json.JSONObject;
 import java.util.Comparator;
 
 import lv.romstr.standupbutton.db.AppDb;
+import lv.romstr.standupbutton.model.CustomField;
 import lv.romstr.standupbutton.model.User;
 import lv.romstr.standupbutton.model.UserList;
 
@@ -34,6 +35,13 @@ public class UserListResponseHandler implements ResponseHandler {
 
         for (User user : userList.getUsers()) {
             user.setFromRedmine(true);
+            String ttsName = null;
+            for (CustomField field : user.getCustomFields()) {
+                if (field.getName().equals("ttsname")) {
+                    ttsName = field.getValue();
+                }
+            }
+            user.setTtsName(ttsName);
         }
 
         AppDb.updateUsersInDb(userList.getUsers());

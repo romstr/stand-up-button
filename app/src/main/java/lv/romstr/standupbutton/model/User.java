@@ -8,6 +8,9 @@ import com.activeandroid.annotation.Table;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //@Generated("org.jsonschema2pojo")
 @Table(name = "Users")
 public class User extends Model {
@@ -45,6 +48,37 @@ public class User extends Model {
 
     @Column(name = "Redmine")
     private Boolean fromRedmine;
+
+    @Column(name = "TtsName")
+    private String ttsName;
+
+    public String getTtsName() {
+        return ttsName;
+    }
+
+    public void setTtsName(String ttsName) {
+        this.ttsName = ttsName;
+    }
+
+    @SerializedName("custom_fields")
+    @Expose
+    private List<CustomField> customFields = new ArrayList<CustomField>();
+
+    public Boolean getOnStandUp() {
+        return isOnStandUp;
+    }
+
+    public void setOnStandUp(Boolean onStandUp) {
+        isOnStandUp = onStandUp;
+    }
+
+    public List<CustomField> getCustomFields() {
+        return customFields;
+    }
+
+    public void setCustomFields(List<CustomField> customFields) {
+        this.customFields = customFields;
+    }
 
     public Boolean getFromRedmine() {
         return fromRedmine;
